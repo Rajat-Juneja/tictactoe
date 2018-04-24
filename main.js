@@ -5,9 +5,10 @@ var parts;
 var player_no=0;
 var player_1;
 var player_2;
+var c=0;
 
 function start(){
-
+c=1;
 document.querySelector(".first").classList.add("highlight");
         document.querySelector(".second").classList.remove("highlight");
 parts = document.querySelectorAll(".col-4");
@@ -49,12 +50,18 @@ function checkifwin(){
     for(let i=0;i<parts.length;i+=3){
         if(parts[i].classList.contains("cross") 
         && parts[i+1].classList.contains("cross") && parts[i+2].classList.contains("cross")){
+            
+            if(c==1){
             alert(player_2+" wins");
+            again();}
             
         }
         if(parts[i].classList.contains("circle") 
         && parts[i+1].classList.contains("circle") && parts[i+2].classList.contains("circle")){
+            
+            if(c==1){
             alert(player_1+" wins");
+            again();}
             
         }
     }
@@ -64,35 +71,51 @@ function checkifwin(){
 
         if(parts[i].classList.contains("cross") 
         && parts[i+3].classList.contains("cross") && parts[i+6].classList.contains("cross")){
-            alert(player_2+" wins");
+            
+            if(c==1){
+            alert(player_2+" wins");again();
+            }
             
         }
         if(parts[i].classList.contains("circle") 
         && parts[i+3].classList.contains("circle") && parts[i+6].classList.contains("circle")){
-            alert(player_1+" wins");
+            
+            if(c==1){
+            alert(player_1+" wins");again();
+            }
            
         }
+       
     }
 
     if(parts[0].classList.contains("cross") 
     && parts[4].classList.contains("cross") && parts[8].classList.contains("cross")){
+        
+        if(c==1){
         alert(player_2+" wins");
+        again();}
         
     }
     if(parts[0].classList.contains("circle") 
     && parts[4].classList.contains("circle") && parts[8].classList.contains("circle")){
-        alert(player_1+" wins");
+        
+        if(c==1){
+        alert(player_1+" wins");again();}
         
     }
 
     if(parts[2].classList.contains("cross") 
     && parts[4].classList.contains("cross") && parts[6].classList.contains("cross")){
-        alert(player_2+" wins");
+        
+        if(c==1){
+        alert(player_2+" wins");again();}
         
     }
     if(parts[2].classList.contains("circle") 
     && parts[4].classList.contains("circle") && parts[6].classList.contains("circle")){
-        alert(player_1+" wins");
+        
+        if(c==1){
+        alert(player_1+" wins");again();}
         
     }
      
@@ -104,10 +127,20 @@ function checkifwin(){
            checked++;
         }
         if(i==parts.length-1 && checked == 9){
+            
+            if(c==1){
             alert("No result , Try again TIC-TAC-TOER'S");
+            again();}
             
         }
     }
 
 
+}
+function again(){
+    c=0;
+   if(confirm("wanna play again?")){
+    window.location.reload();
+   }
+   
 }
