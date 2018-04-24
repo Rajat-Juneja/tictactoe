@@ -51,7 +51,7 @@ function checkifwin(){
         if(parts[i].classList.contains("cross") 
         && parts[i+1].classList.contains("cross") && parts[i+2].classList.contains("cross")){
             
-            if(c==1){
+            if(won==1){
             alert(player_2+" wins");
             again();}
             
@@ -59,7 +59,7 @@ function checkifwin(){
         if(parts[i].classList.contains("circle") 
         && parts[i+1].classList.contains("circle") && parts[i+2].classList.contains("circle")){
             
-            if(c==1){
+            if(won==1){
             alert(player_1+" wins");
             again();}
             
@@ -72,7 +72,7 @@ function checkifwin(){
         if(parts[i].classList.contains("cross") 
         && parts[i+3].classList.contains("cross") && parts[i+6].classList.contains("cross")){
             
-            if(c==1){
+            if(won==1){
             alert(player_2+" wins");again();
             }
             
@@ -80,7 +80,7 @@ function checkifwin(){
         if(parts[i].classList.contains("circle") 
         && parts[i+3].classList.contains("circle") && parts[i+6].classList.contains("circle")){
             
-            if(c==1){
+            if(won==1){
             alert(player_1+" wins");again();
             }
            
@@ -91,7 +91,7 @@ function checkifwin(){
     if(parts[0].classList.contains("cross") 
     && parts[4].classList.contains("cross") && parts[8].classList.contains("cross")){
         
-        if(c==1){
+        if(won==1){
         alert(player_2+" wins");
         again();}
         
@@ -99,7 +99,7 @@ function checkifwin(){
     if(parts[0].classList.contains("circle") 
     && parts[4].classList.contains("circle") && parts[8].classList.contains("circle")){
         
-        if(c==1){
+        if(won==1){
         alert(player_1+" wins");again();}
         
     }
@@ -107,14 +107,14 @@ function checkifwin(){
     if(parts[2].classList.contains("cross") 
     && parts[4].classList.contains("cross") && parts[6].classList.contains("cross")){
         
-        if(c==1){
+        if(won==1){
         alert(player_2+" wins");again();}
         
     }
     if(parts[2].classList.contains("circle") 
     && parts[4].classList.contains("circle") && parts[6].classList.contains("circle")){
         
-        if(c==1){
+        if(won==1){
         alert(player_1+" wins");again();}
         
     }
@@ -128,7 +128,7 @@ function checkifwin(){
         }
         if(i==parts.length-1 && checked == 9){
             
-            if(c==1){
+            if(won==1){
             alert("No result , Try again TIC-TAC-TOER'S");
             again();}
             
