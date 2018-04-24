@@ -5,10 +5,10 @@ var parts;
 var player_no=0;
 var player_1;
 var player_2;
-var c=0;
+var won=0;
 
 function start(){
-c=1;
+won=1;
 document.querySelector(".first").classList.add("highlight");
         document.querySelector(".second").classList.remove("highlight");
 parts = document.querySelectorAll(".col-4");
@@ -138,7 +138,7 @@ function checkifwin(){
 
 }
 function again(){
-    c=0;
+    won=0;
    if(confirm("wanna play again?")){
     window.location.reload();
    }
